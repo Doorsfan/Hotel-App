@@ -1,69 +1,99 @@
-# React + TypeScript + Vite
+# LuxeStay - Hotel Booking Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern hotel booking platform built with Next.js, React, and Tailwind CSS.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Modern UI/UX**: Beautiful, responsive design with Tailwind CSS
+- **Hotel Listings**: Browse and search premium hotels worldwide
+- **Destination Explorer**: Discover amazing travel destinations
+- **Special Deals**: Exclusive offers and discounts
+- **User Authentication**: Secure login and registration system
+- **Contact & Support**: Comprehensive help center and FAQ
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Framework**: Next.js 15 with App Router
+- **UI Library**: React 18 with TypeScript
+- **Styling**: Tailwind CSS with custom design system
+- **Components**: Radix UI primitives with shadcn/ui
+- **Icons**: Lucide React
+- **Forms**: React Hook Form with Zod validation
+- **State Management**: TanStack Query (React Query)
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Getting Started
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+### Prerequisites
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- Node.js 18+ 
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone <repository-url>
+cd hotel-app
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+2. Install dependencies:
+```bash
+npm install
 ```
+
+3. Run the development server:
+```bash
+npm run dev
+```
+
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run start` - Start production server
+- `npm run lint` - Run ESLint
+
+## Project Structure
+
+```
+├── app/                    # Next.js App Router pages
+│   ├── layout.tsx         # Root layout
+│   ├── page.tsx           # Home page
+│   ├── login/             # Authentication pages
+│   ├── hotels/            # Hotel listings
+│   ├── destinations/      # Destination pages
+│   └── ...                # Other pages
+├── src/
+│   ├── components/        # Reusable components
+│   │   ├── ui/           # shadcn/ui components
+│   │   ├── Header.tsx    # Navigation header
+│   │   └── Footer.tsx    # Site footer
+│   ├── hooks/            # Custom React hooks
+│   └── lib/              # Utility functions
+├── public/               # Static assets
+└── ...                   # Configuration files
+```
+
+## Migration Notes
+
+This project was migrated from Vite + React Router to Next.js with App Router. Key changes include:
+
+- **Routing**: Converted from React Router to Next.js App Router
+- **File Structure**: Moved from `src/pages/` to `app/` directory structure
+- **Imports**: Updated all routing imports from `react-router-dom` to `next/link`
+- **Configuration**: Replaced Vite config with Next.js configuration
+- **Build System**: Updated from Vite to Next.js build system
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Run tests and linting
+5. Submit a pull request
+
+## License
+
+This project is licensed under the MIT License.

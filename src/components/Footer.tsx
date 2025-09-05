@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const Footer = () => {
   return (
     <footer className="bg-elegant text-elegant-foreground">
@@ -39,24 +41,24 @@ const Footer = () => {
             <h4 className="font-semibold text-elegant-foreground mb-4">Quick Links</h4>
             <ul className="space-y-2">
               <li>
-                <a href="/" className="text-elegant-foreground/80 hover:text-luxury transition-colors duration-200">
+                <Link href="/" className="text-elegant-foreground/80 hover:text-luxury transition-colors duration-200">
                   Home
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/about" className="text-elegant-foreground/80 hover:text-luxury transition-colors duration-200">
+                <Link href="/about" className="text-elegant-foreground/80 hover:text-luxury transition-colors duration-200">
                   About Us
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/contact" className="text-elegant-foreground/80 hover:text-luxury transition-colors duration-200">
+                <Link href="/contact" className="text-elegant-foreground/80 hover:text-luxury transition-colors duration-200">
                   Contact
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/privacy-policy" className="text-elegant-foreground/80 hover:text-luxury transition-colors duration-200">
+                <Link href="/privacy-policy" className="text-elegant-foreground/80 hover:text-luxury transition-colors duration-200">
                   Privacy Policy
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -66,24 +68,24 @@ const Footer = () => {
             <h4 className="font-semibold text-elegant-foreground mb-4">Support</h4>
             <ul className="space-y-2">
               <li>
-                <a href="/help" className="text-elegant-foreground/80 hover:text-luxury transition-colors duration-200">
+                <Link href="/help" className="text-elegant-foreground/80 hover:text-luxury transition-colors duration-200">
                   Help Center
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/faq" className="text-elegant-foreground/80 hover:text-luxury transition-colors duration-200">
+                <Link href="/faq" className="text-elegant-foreground/80 hover:text-luxury transition-colors duration-200">
                   FAQ
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/booking-help" className="text-elegant-foreground/80 hover:text-luxury transition-colors duration-200">
+                <Link href="/booking-help" className="text-elegant-foreground/80 hover:text-luxury transition-colors duration-200">
                   Booking Help
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/cancellation" className="text-elegant-foreground/80 hover:text-luxury transition-colors duration-200">
+                <Link href="/cancellation" className="text-elegant-foreground/80 hover:text-luxury transition-colors duration-200">
                   Cancellation
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -95,15 +97,15 @@ const Footer = () => {
             © 2024 LuxStay. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <a href="/terms" className="text-elegant-foreground/60 hover:text-luxury transition-colors duration-200 text-sm">
+            <Link href="/terms" className="text-elegant-foreground/60 hover:text-luxury transition-colors duration-200 text-sm">
               Terms of Service
-            </a>
-            <a href="/privacy-policy" className="text-elegant-foreground/60 hover:text-luxury transition-colors duration-200 text-sm">
+            </Link>
+            <Link href="/privacy-policy" className="text-elegant-foreground/60 hover:text-luxury transition-colors duration-200 text-sm">
               Privacy Policy
-            </a>
-            <a href="/cookies" className="text-elegant-foreground/60 hover:text-luxury transition-colors duration-200 text-sm">
+            </Link>
+            <Link href="/cookies" className="text-elegant-foreground/60 hover:text-luxury transition-colors duration-200 text-sm">
               Cookie Policy
-            </a>
+            </Link>
           </div>
         </div>
       </div>

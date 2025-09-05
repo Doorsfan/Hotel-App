@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 const Header = () => {
   return (
@@ -15,39 +15,39 @@ const Header = () => {
 
           {/* Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <a 
+            <Link 
               href="/" 
               className="text-foreground hover:text-primary transition-colors duration-200 font-medium"
             >
               Home
-            </a>
-            <a 
+            </Link>
+            <Link 
               href="/hotels" 
               className="text-foreground hover:text-primary transition-colors duration-200 font-medium"
             >
               Hotels
-            </a>
-            <a 
+            </Link>
+            <Link 
               href="/destinations" 
               className="text-foreground hover:text-primary transition-colors duration-200 font-medium"
             >
               Destinations
-            </a>
-            <a 
+            </Link>
+            <Link 
               href="/deals" 
               className="text-foreground hover:text-primary transition-colors duration-200 font-medium"
             >
               Deals
-            </a>
+            </Link>
           </nav>
 
           {/* Auth Buttons */}
           <div className="flex items-center space-x-4">
             <Button variant="ghost" className="hidden sm:inline-flex" asChild>
-              <Link to="/login">Log In</Link>
+              <Link href="/login">Log In</Link>
             </Button>
             <Button variant="default" className="bg-gradient-to-r from-primary to-trust hover:from-primary-hover hover:to-primary shadow-soft" asChild>
-              <Link to="/register">Sign Up</Link>
+              <Link href="/register">Sign Up</Link>
             </Button>
           </div>
         </div>
