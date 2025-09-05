@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Hotel } from "lucide-react";
 
-const HomePage = () => {
+const Index = () => {
   return (
     <div className="min-h-screen relative flex items-center justify-center">
       {/* Background Image with Overlay */}
@@ -63,4 +63,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default Index;
